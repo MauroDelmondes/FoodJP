@@ -68,7 +68,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* background-color: aqua; */
   padding-top: 10rem;
 }
 
@@ -124,7 +123,6 @@ main {
   text-decoration: underline;
   cursor: pointer;
 }
-
 
 /* cardápio */
 .container__section__cardapio {
@@ -186,6 +184,51 @@ main {
   margin: 24px 0px;
   color: #616161;
   text-align: center;
+}
+
+/* comentários */
+.container__section__sobre {
+  display: flex;
+  flex-direction: column;
+  width: 58vw;
+}
+
+.card__comment__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.user__card {
+  background-color: var(--white-200);
+  border-radius: 1rem;
+  width: 34rem;
+  padding: 2rem;
+}
+
+.username {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin: 1rem 0;
+}
+
+.user__comment {
+  color: var(--gray);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.user__rating__ul {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.user__rating__li img {
+  width: 1rem;
+  margin-left: .3rem;
 }
 
 
