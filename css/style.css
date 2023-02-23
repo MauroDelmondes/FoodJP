@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap');
 
-/* 
-font-family: 'Inter', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
 :root {
   --red: #DA2535;
   --gray: #616161;
@@ -229,6 +224,150 @@ main {
 .user__rating__li img {
   width: 1rem;
   margin-left: .3rem;
+}
+
+/* Localização */
+.container__section__sobre {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.card__localizacao__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.card__localizacao__container img {
+  width: 58vw;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* SEARCH BAR CONTAINER */
+.search-local {
+  width: 90%;
+  max-width: 75rem;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  padding-left: 2rem;
+  background: var(--white);
+  border-radius: 1rem;
+  min-height: 7rem;
+  height: auto;
+  border: 0.1rem solid var(--black);
+  border-right: none;
+}
+
+/* ICON */
+.icon {
+  color: var(--red);
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon:hover {
+  animation: funny-icon 0.4s ease-in-out;
+}
+
+@keyframes funny-icon {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0.8;
+    transform-origin: bottom;
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+/* INPUT */
+.search-local input {
+  height: 100%;
+  width: 100%;
+  flex: 1 1 25rem;
+  background: var(--white);
+  display: flex;
+  outline: none;
+  border: none;
+  color: var(--gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+}
+
+input[type="text"]::placeholder {
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+
+.icon img {
+  width: 2rem;
+  margin: 0;
+}
+
+/* BUTTON */
+.search-local button {
+  background: var(--red);
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  height: 7rem;
+  width: 18rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+button a {
+  color: var(--white);
+}
+
+.search-local button .search-icon {
+  display: none;
+}
+
+.search-local button:hover {
+  letter-spacing: 0.5rem;
+}
+
+/* MEDIAS */
+@media (max-width: 575px) {
+  .search-local {
+    padding-left: 0;
+    column-gap: 0.25rem;
+  }
+
+  .search-local button {
+    width: 10rem;
+  }
+
+  button a {
+    display: none;
+  }
+
+  .search-local button .search-icon {
+    display: block;
+    margin-inline: auto;
+    color: var(--white);
+    font-size: 3rem;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 1.7rem;
+  }
 }
 
 
