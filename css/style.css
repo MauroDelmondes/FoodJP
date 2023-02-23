@@ -72,7 +72,7 @@ main {
   padding-top: 10rem;
 }
 
-/* container__section__inicio */
+/* início */
 .container__section__inicio {
   background-color: var(--white);
   display: flex;
@@ -126,42 +126,28 @@ main {
 }
 
 
-
-
-/* teste */
-
-
-/* body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-} */
-
-/* img {
-  display: block;
-  max-width: 100%;
- }  */
-
+/* cardápio */
 .container__section__cardapio {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 3rem 0;
 }
 
 .card__container{
   display: flex;
 }
 
-.center__title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  margin: 3rem 0;
-}
-
 .card {
-  width: 24rem;
-  min-height: 28rem;
+  width: 22rem;
+  height: 25rem;
   background: var(--white-200);
   position: relative;
   display: flex;
@@ -169,29 +155,33 @@ main {
   align-items: center;
   justify-content: flex-end;
   border-radius: 32px;
-  padding-inline: 10px;
-  padding: 40px;
-  margin: 0 10px;
+  padding-inline: 1rem;
+  padding: 2rem;
+  margin: 5rem 1rem;
 }
 
 .card-img {
   position: absolute;
-  top: -8rem;
+  top: -5rem;
+}
+
+.card-img img {
+  max-width: 15rem;
 }
 
 .nome-do-prato,
 .preco-do-prato {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 32px;
-  color: #292929;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--black);
   text-align: center;
 }
 
 .descricao-prato {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 160%;
   margin: 24px 0px;
   color: #616161;
@@ -199,14 +189,7 @@ main {
 }
 
 
-
-
-
-
-
-
 /* footer */
-
 footer {
   display: flex;
   align-items: flex-start;
