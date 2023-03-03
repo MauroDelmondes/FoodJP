@@ -11,19 +11,29 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="#"
-        ><span class="logo__food">Food</span><span class="red">JP</span></a
-      >
+      <nav role="navigation" class="navigation">
+        <a class="logo" href="#"
+          ><span class="logo__food">Food</span><span class="red">JP</span>
+        </a>
 
-      <nav>
-        <ul class="nav__links">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#cardapio">Cardápio</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-        </ul>
+        <div class="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul class="menu">
+            <a href="#inicio"><li>Início</li></a>
+            <a href="#cardapio"><li>Cardápio</li></a>
+            <a href="#sobre"><li>Sobre</li></a>
+            <a class="cta" href="#equipe">
+              <li><button>Entrar</button></li>
+            </a>
+          </ul>
+        </div>
+        <a class="equipe" href="#equipe"><button>Entrar</button></a>
       </nav>
-
-      <a class="cta" href="#equipe"><button>Entrar</button></a>
     </header>
 
     <main class="container">
@@ -214,35 +224,39 @@
     </main>
 
     <footer>
-      <div class="footer__logo">
-        <h2 class="footer__title">
-          <a class="logo" href="#">Food<span class="red">JP</span></a>
-        </h2>
-      </div>
+      <div class="footer__container">
+        <div class="footer__logo">
+          <h2 class="footer__title">
+            <a class="logo" href="#">Food<span class="red">JP</span></a>
+          </h2>
+        </div>
 
-      <div class="footer__div">
-        <h2 class="footer__title">Contato</h2>
-        <ul>
-          <li><a href="#">+55 21 9999-9999</a></li>
-          <li><a href="#">email@gmail.com</a></li>
-        </ul>
-      </div>
+        <div class="footer__content">
+          <div class="footer__div">
+            <h2 class="footer__title">Contato</h2>
+            <ul>
+              <li><a href="#">+55 21 9999-9999</a></li>
+              <li><a href="#">email@gmail.com</a></li>
+            </ul>
+          </div>
 
-      <div class="footer__div">
-        <h2 class="footer__title">Sobre nós</h2>
-        <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Valores</a></li>
-          <li><a href="#">Pagina principal</a></li>
-        </ul>
-      </div>
+          <div class="footer__div">
+            <h2 class="footer__title">Sobre nós</h2>
+            <ul>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Valores</a></li>
+              <li><a href="#">Pagina principal</a></li>
+            </ul>
+          </div>
 
-      <div class="footer__div">
-        <h2 class="footer__title">Serviços</h2>
-        <ul>
-          <li><a href="#">Entrega</a></li>
-          <li><a href="#">Retirada</a></li>
-        </ul>
+          <div class="footer__div">
+            <h2 class="footer__title">Serviços</h2>
+            <ul>
+              <li><a href="#">Entrega</a></li>
+              <li><a href="#">Retirada</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

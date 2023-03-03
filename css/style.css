@@ -10,21 +10,51 @@
 
 body {
   background-color: var(--white);
+  overflow-x: hidden;
 }
+
 
 /* header */
 header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation {
   position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
   font-family: 'Inter', sans-serif;
   font-size: medium;
-  padding: 2rem 0;
+  padding: 1% 0;
   font-weight: 500;
-  background-color: var(--white);
+  margin-top: 4rem;
   z-index: 1;
+}
+
+.menuToggle {
+  display: flex;
+  justify-content: center;
+}
+
+.menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
 }
 
 .logo {
@@ -41,12 +71,39 @@ header {
   color: var(--red);
 }
 
-header button {
+.navigation input[type="checkbox"] {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menuToggle input:checked ~ ul
+{
+  transform: none;
+  opacity: 1;
+}
+
+.menu li{
+  display: flex;
+  align-items: baseline;
+}
+
+.cta {
+  display: none;
+}
+
+.equipe {
   border: 2px solid var(--black);
   padding: .5rem 2.75rem;
   border-radius: .5rem;
   cursor: pointer;
-  margin-right: 10rem;
 }
 
 header ul {
@@ -374,6 +431,19 @@ footer {
   justify-content: center;
 }
 
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .footer__div{
   display: flex;
   margin: 0 5rem;
@@ -444,6 +514,7 @@ footer {
 
   /* comentários */
   .container__section__sobre {
+    margin: 0;
     align-items: center;
   }
 
@@ -455,8 +526,16 @@ footer {
   .user__card {
     background-color: var(--white-200);
     border-radius: 1rem;
-    width: 34rem;
+    width: 100%;
     padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+  /* Button pesquisa*/
+
+  button a {
+    display: none;
   }
 }
 
@@ -467,11 +546,292 @@ footer {
   }
 }
 
+@media screen and (max-width: 1100px) {
+    /* comentários */
+    .side__title {
+      width: 58vw;
+    }
 
-@media screen and (max-width: 1225px) {
-  /* Button pesquisa*/
+    .side__text {
+      width: 58vw;
+    }
 
-  button a {
+  /* footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    align-self: flex-start;
+    margin: 0 5rem;
+  }
+
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__div{
+    display: flex;
+    margin: 0 5rem;
+    flex-direction: column;
+    align-items:start;
+    padding: 0;
+  }
+
+  .footer__title {
+    align-self: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  .footer__div ul {
+    font-family: 'Inter', sans-serif;
+    color: var(--gray);
+  }
+
+  .footer__div li{
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  /* comentários */
+  .container__section__sobre {
+    margin: 0;
+  }
+
+  .user__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user__card:first-child {
+    margin-bottom: 2rem;
+  }
+}
+
+
+@media (max-width: 950px) {
+
+  .cta {
+    display: block;
+  }
+
+  .equipe {
     display: none;
+  }
+
+  a
+  {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+  }
+
+  a:hover
+  {
+    color: tomato;
+  }
+
+  .menuToggle
+  {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .navigation {
+    width: 100vw;
+    height: 12vh;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin-top: 1.5rem;
+  }
+
+  .logo__food {
+    margin-left: 15vw;
+  }
+
+  .navigation input[type="checkbox"]
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+  }
+
+  /*
+  * Just a quick hamburger
+  */
+  .menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+
+  .menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+
+  .menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  .menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+  * But let's hide the middle one.
+  */
+  .menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+  * Ohyeah and the last one should go the other direction
+  */
+  .menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    top: 8vh;
+    right: -6vw;
+    
+    background: var(--white);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  .menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+  * And let's fade it in from the left
+  */
+  .menuToggle input:checked ~ ul
+  {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .menu {
+    right: -10vw;
+  }
+}
+
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navigation .menu li{
+      font-size: 1.6rem;
+  }
+
+  .navigation .menu li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
   }
 }
